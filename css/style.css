@@ -403,6 +403,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-left: 9px;
 }
 .optionally__card {
   width: 29.4%;
@@ -498,4 +499,123 @@ body {
 }
 .card__characteristic:nth-child(n+2) {
   margin-top: 15px;
+}
+
+.product {
+  margin-top: 140px;
+}
+.product:last-child {
+  margin-bottom: 228px;
+}
+.product span {
+  font-weight: 700;
+}
+.product__wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.product__title {
+  margin-bottom: 55px;
+}
+.product__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.product__gallery {
+  max-width: 550px;
+}
+.product__content {
+  margin-left: 60px;
+}
+.product__characteristic {
+  position: relative;
+  padding-left: 19px;
+}
+.product__characteristic::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  background-image: url("../svg/card_item.svg");
+}
+.product__characteristic:nth-child(n+2) {
+  margin-top: 20px;
+}
+.product__description {
+  margin-top: 20px;
+}
+.product__button-1 {
+  margin-top: 27px;
+}
+.product__time {
+  margin-top: 33px;
+}
+.product__delivery {
+  margin-top: 20px;
+}
+.product__button-2 {
+  margin-top: 34px;
+}
+
+.gallery__main {
+  position: relative;
+  width: 100%;
+}
+.gallery__main::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  width: 218px;
+  height: 185px;
+  background-color: #ffbc2a;
+}
+.gallery__main img {
+  position: relative;
+  z-index: 3;
+}
+.gallery__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 13px;
+}
+.gallery__image {
+  cursor: pointer;
+}
+.gallery__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 10px;
+}
+.gallery__button {
+  width: 43px;
+  height: 38px;
+  background-color: #ffbc2a;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px 19px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.gallery__button:hover {
+  background-color: #a78a07;
+}
+.gallery__left {
+  background-image: url("../img/arrow_left.png");
+}
+.gallery__right {
+  background-image: url("../img/arrow_right.png");
 }

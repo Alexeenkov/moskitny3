@@ -375,6 +375,7 @@ body {
   &__cards {
     display: flex;
     justify-content: space-between;
+    margin-left: 9px;
   }
   &__card {
     width: 29.4%;
@@ -470,5 +471,116 @@ body {
     &:nth-child(n+2) {
       margin-top: 15px;
     }
+  }
+}
+
+.product {
+  margin-top: 140px;
+  &:last-child {
+    margin-bottom: 228px;
+  }
+  span {
+    font-weight: 700;
+  }
+  &__wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  &__title {
+    margin-bottom: 55px;
+  }
+  &__container {
+    display: flex;
+  }
+  &__gallery {
+    max-width: 550px;
+  }
+  &__content {
+    margin-left: 60px;
+  }
+  &__characteristics {}
+  &__characteristic {
+    position: relative;
+    padding-left: 19px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 9px;
+      height: 9px;
+      background-image: url('../svg/card_item.svg');
+    }
+    &:nth-child(n+2) {
+      margin-top: 20px;
+    }
+  }
+  &__description {
+    margin-top: 20px;
+  }
+  &__button-1 {
+    margin-top: 27px;
+  }
+  &__time {
+    margin-top: 33px;
+  }
+  &__delivery {
+    margin-top: 20px;
+  }
+  &__button-2 {
+    margin-top: 34px;
+  }
+}
+
+.gallery {
+  &__main {
+    position: relative;
+    width: 100%;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -9px;
+      right: -9px;
+      width: 218px;
+      height: 185px;
+      background-color: #ffbc2a;
+    }
+    & img {
+      position: relative;
+      z-index: 3;
+    }
+  }
+  &__images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+  }
+  &__image {
+    cursor: pointer;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  &__button {
+    width: 43px;
+    height: 38px;
+    background-color: #ffbc2a;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 11px 19px;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:hover {
+      background-color: #a78a07;
+    }
+  }
+  &__left {
+    background-image: url('../img/arrow_left.png');
+  }
+  &__right {
+    background-image: url('../img/arrow_right.png');
   }
 }

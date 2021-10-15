@@ -315,7 +315,7 @@ body {
   }
   &__card {
     position: relative;
-    width: 20.75%;
+    width: 21.28%;
     min-height: 485px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -348,5 +348,127 @@ body {
   }
   &__button {
     padding: 9px 56px 9px 45px;
+  }
+}
+
+.title {
+  font-family: "Bebas Neue Bold", "Arial", "Helvetica", sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.optionally {
+  background-color: #f9f9f9;
+  padding: 62px 0 132px;
+  &__wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  &__title {
+    max-width: 441px;
+    margin-bottom: 72px;
+  }
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__card {
+    width: 29.4%;
+  }
+}
+
+.card {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    width: 218px;
+    height: 185px;
+    background-color: #ffbc2a;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: -9px;
+    width: 218px;
+    height: 185px;
+    background-color: #a78a07;
+  }
+  &__wrapper {
+    position: relative;
+    z-index: 3;
+    padding: 21px 20px 42px;
+    height: 100%;
+    background-color: #fafafa;
+  }
+  &__title {
+    position: relative;
+    font-family: "Bebas Neue Bold", "Arial", "Helvetica", sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &_1 {
+      padding-left: 61px;
+      &::before {
+        width: 45px;
+        height: 47px;
+        background-image: url('../img/optionally_1.png');
+      }
+    }
+    &_2 {
+      padding-left: 67px;
+      &::before {
+        width: 51px;
+        height: 50px;
+        background-image: url('../img/optionally_2.png');
+      }
+    }
+    &_3 {
+      padding-left: 61px;
+      &::before {
+        width: 45px;
+        height: 51px;
+        background-image: url('../img/optionally_3.png');
+      }
+    }
+  }
+  &__description {
+    font-weight: 700;
+    max-width: 280px;
+    margin-bottom: 15px;
+  }
+  &__characteristics {}
+  &__characteristic {
+    position: relative;
+    padding-left: 19px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 9px;
+      height: 9px;
+      background-image: url('../svg/card_item.svg');
+    }
+    &:nth-child(n+2) {
+      margin-top: 15px;
+    }
   }
 }

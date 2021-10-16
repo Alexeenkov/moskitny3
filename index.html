@@ -196,6 +196,8 @@
         </div>
       </div>
     </div>
+    <img src="svg/triangle_left.svg" alt="Треугольник (декор)" class="product__triangle product__triangle_left">
+    <img src="svg/triangle_right_dual.svg" alt="Треугольник (декор)" class="product__triangle product__triangle_right">
   </div>
 
   <div class="product">
@@ -343,7 +345,98 @@
         </div>
       </div>
     </div>
+    <img src="svg/triangle_left_dual.svg" alt="Треугольник (декор)" class="product__triangle product__triangle_left-dual">
   </div>
+
+  <div class="calculator">
+    <div class="wrapper calculator__wrapper">
+      <h2 class="title calculator__title">
+        Рассчитайте стоимость
+      </h2>
+      <form action="#" class="calculator__form">
+        <div class="calculator__left-col">
+          <span class="calculator__subtitle">1.Выберите тип сетки</span>
+          <select name="select" id="name" class="calculator__select">
+              <option value="Обычная" selected>Обычная</option>
+              <option value="Обычная">Премиальная</option>
+              <option value="Обычная">Плиссе, гармошка</option>
+              <option value="Обычная">Детская, защищающая от выпадения</option>
+            </select>
+
+          <span class="calculator__subtitle">2.Введите размер</span>
+          <div class="range">
+            <span class="range__title">Ширина в см</span>
+            <input type="range" class="range__input">
+          </div>
+          <div class="range">
+            <span class="range__title">Высота в см</span>
+            <input type="range" class="range__input">
+          </div>
+
+          <span class="calculator__subtitle">3.Выберите цвет</span>
+          <label>
+            <input name="color" type="radio" class="calculator__radio">
+            <span class="calculator__radio-name">Белый</span>
+          </label>
+          <label class="calculator_margin-top">
+            <input name="color" type="radio" class="calculator__radio">
+            <span class="calculator__radio-name">Коричневый</span>
+          </label>
+        </div>
+
+        <div class="calculator__right-col">
+          <span class="calculator__subtitle">4.Выберите полотно</span>
+          <label>
+            <input name="option" type="radio" class="calculator__radio">
+            <span class="calculator__radio-name">Стандарт</span>
+          </label>
+          <label class="calculator_margin-top">
+            <input name="option" type="radio" class="calculator__radio">
+            <span class="calculator__radio-name">Анти-мошка</span>
+          </label>
+          <label class="calculator_margin-top">
+            <input name="option" type="radio" class="calculator__radio">
+            <span class="calculator__radio-name">Анти-пыльца</span>
+          </label>
+          <label class="calculator_margin-top">
+            <input name="option" type="radio" class="calculator__radio">
+            <span class="calculator__radio-name">Анти-кошка</span>
+          </label>
+
+          <span class="calculator__subtitle">5.Выберите полотно</span>
+          <label>
+            <input name="type" type="radio" class="calculator__radio">
+            <span class="calculator__radio-name">Дверь</span>
+          </label>
+          <label class="calculator_margin-top">
+            <input name="type" type="radio" class="calculator__radio">
+            <span class="calculator__radio-name">Окно</span>
+          </label>
+
+          <div class="calculator__price">
+            Цена: <span id="price">0</span> р
+          </div>
+          <button type="submit" class="button calculator__button">Заказать</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="instruction">
+    <div class="wrapper instruction__wrapper">
+      <div class="instruction__content">
+        <h2 class="title instruction__title">
+          Скачайте инструкцию
+        </h2>
+        <div class="instruction__description">
+          по самостоятельной замерке окна для сетки
+        </div>
+        <a href="#0" class="button instruction__button">Получить инструкцию</a>
+      </div>
+      <div class="instruction__img">
+        <img src="img/instruction_book.png" alt="Инструкция">
+      </div>
+    </div>
 
 </body>
 

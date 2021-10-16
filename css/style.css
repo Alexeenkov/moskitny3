@@ -502,6 +502,7 @@ body {
 }
 
 .product {
+  position: relative;
   margin-top: 140px;
 }
 .product:last-child {
@@ -511,6 +512,8 @@ body {
   font-weight: 700;
 }
 .product__wrapper {
+  position: relative;
+  z-index: 3;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -559,6 +562,23 @@ body {
 }
 .product__button-2 {
   margin-top: 34px;
+}
+.product__triangle {
+  position: absolute;
+}
+.product__triangle_left {
+  left: -218px;
+  width: 435px;
+  bottom: 0;
+}
+.product__triangle_right {
+  right: -242px;
+  width: 483px;
+  bottom: -225px;
+}
+.product__triangle_left-dual {
+  left: -384px;
+  top: 0;
 }
 
 .gallery__main {
@@ -618,4 +638,166 @@ body {
 }
 .gallery__right {
   background-image: url("../img/arrow_right.png");
+}
+
+.calculator {
+  background-color: #f9f9f9;
+  padding: 60px 0 75px;
+  margin-top: 229px;
+}
+.calculator__wrapper {
+  max-width: 1040px;
+  padding: 25px 90px 45px;
+  background-image: url("../img/calculator_bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 2px solid #ffbc2a;
+  margin: 0 auto;
+}
+.calculator_margin-top {
+  margin-top: 20px;
+}
+.calculator__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #262626;
+  font-size: 16px;
+  font-weight: 700;
+}
+.calculator__form label {
+  cursor: pointer;
+}
+.calculator__left-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.calculator__subtitle {
+  font-family: "Bebas Neue Bold", "Arial", "Helvetica", sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+  margin-top: 45px;
+}
+.calculator__select {
+  width: 422px;
+  height: 53px;
+  border: 2px solid #ffbc2a;
+  border-radius: 10px;
+  padding: 0 26px 0 29px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../svg/select_triangle.svg");
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: right 26px center;
+  color: inherit;
+}
+.calculator__select:focus {
+  border: 2px solid #a78a07;
+}
+.calculator__radio {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.calculator__radio:checked ~ .calculator__radio-name::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.calculator__radio-name {
+  position: relative;
+  padding-left: 17px;
+  margin-left: 20px;
+}
+.calculator__radio-name::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -3px;
+  left: -20px;
+  border: 2px solid #ffbc2a;
+  border-radius: 5px;
+}
+.calculator__radio-name::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: -16px;
+  top: 1px;
+  background-color: #ffbc2a;
+  border-radius: 3px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.calculator__right-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 178px;
+}
+.calculator__price {
+  font-family: "Bebas Neue Bold", "Arial", "Helvetica", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 57px;
+  margin-bottom: 32px;
+}
+.instruction {
+  padding-top: 178px;
+  padding-bottom: 162px;
+}
+.instruction__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1015px;
+  margin: 0 auto;
+}
+.instruction__title {
+  font-size: 48px;
+  letter-spacing: 5px;
+}
+.instruction__description {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  max-width: 260px;
+}
+.instruction__button {
+  margin-top: 28px;
+}
+.instruction__img {
+  max-width: 410px;
+}
+.instruction__img img {
+  width: 100%;
 }

@@ -1,7 +1,7 @@
 const burger = document.querySelector('.burger');
 const burgerIcon = document.querySelector('.burger__icon');
 const menu = document.querySelector('.header__list');
-const menuLinks = document.querySelectorAll('.header__item a');
+const menuLinks = document.querySelectorAll('.scroll-to-item');
 
 burger.addEventListener('click', () => {
   burgerIcon.classList.toggle('active');
@@ -13,7 +13,7 @@ for (let link of menuLinks) {
     event.preventDefault();
     burgerIcon.classList.remove('active');
     menu.classList.remove('active');
-    // scrollToItem(event);
+    scrollToItem(event);
   });
 }
 

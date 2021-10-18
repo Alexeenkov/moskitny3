@@ -271,6 +271,10 @@ html.lock {
   margin-right: 0;
 }
 
+.burger {
+  display: none;
+}
+
 .face {
   background-image: url("../img/face_bg.jpg");
   background-repeat: no-repeat;

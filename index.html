@@ -5,18 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- ! Предзагрузка шрифтов -->
-  <link rel="preload" href="fonts/YandexSansText-Regular.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="fonts/YandexSansText-Bold.woff2" as="font" type="font/woff2" crossorigin />
-  <!-- ! Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="manifest" href="favicon/site.webmanifest">
-  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+  <link rel="preload" href="fonts/BebasNeueBold.woff2" as="font" type="font/woff2" crossorigin />
   <!--! Подключение файлов CSS -->
-  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
   <title>Производство жалюзи на КВМ</title>
 </head>
@@ -48,19 +38,19 @@
       <nav>
         <ul class="header__list">
           <li class="header__item">
-            <a href="#0">Типы сеток</a>
+            <a data-goto=".option" href="#0" class="scroll-to-item">Типы сеток</a>
           </li>
           <li class="header__item">
-            <a href="#0">Рассчитать стоимость</a>
+            <a data-goto=".calculator" href="#0" class="scroll-to-item">Рассчитать стоимость</a>
           </li>
           <li class="header__item">
-            <a href="#0">Сроки изготовления</a>
+            <a data-goto=".deadlines" href="#0" class="scroll-to-item">Сроки изготовления</a>
           </li>
           <li class="header__item">
-            <a href="#0">Доставка и монтаж</a>
+            <a data-goto=".product" href="#0" class="scroll-to-item">Доставка и монтаж</a>
           </li>
           <li class="header__item">
-            <a href="#0">Контакты</a>
+            <a data-goto=".contacts" href="#0" class="scroll-to-item">Контакты</a>
           </li>
           <li class="header__mobile">
             <a href="tel:+79188032203" class="header__tel">+7 918 803 22 03</a>
@@ -98,25 +88,25 @@
         <li class="option__card option__card_1">
           <div class="option__container">
             <h2 class="option__title option__title_width">Обычные сетки</h2>
-            <a href="#0" class="button option__button">Подробнее</a>
+            <a data-goto=".product-1" href="#0" class="button option__button scroll-to-item">Подробнее</a>
           </div>
         </li>
         <li class="option__card option__card_2">
           <div class="option__container">
             <h2 class="option__title">Вставные премиальные</h2>
-            <a href="#0" class="button option__button">Подробнее</a>
+            <a data-goto=".product-2" href="#0" class="button option__button scroll-to-item">Подробнее</a>
           </div>
         </li>
         <li class="option__card option__card_3">
           <div class="option__container">
             <h2 class="option__title">Плиссе гармошка</h2>
-            <a href="#0" class="button option__button">Подробнее</a>
+            <a data-goto=".product-3" href="#0" class="button option__button scroll-to-item">Подробнее</a>
           </div>
         </li>
         <li class="option__card option__card_4">
           <div class="option__container">
             <h2 class="option__title">Детские от&nbsp;выпадения</h2>
-            <a href="#0" class="button option__button">Подробнее</a>
+            <a data-goto=".product-4" href="#0" class="button option__button scroll-to-item">Подробнее</a>
           </div>
         </li>
       </ul>
@@ -166,7 +156,7 @@
     </div>
   </div>
 
-  <div class="product">
+  <div class="product product-1">
     <div class="wrapper product__wrapper">
       <h2 class="title product__title">Обычные москитные сетки</h2>
       <div class="product__container">
@@ -200,7 +190,7 @@
           <div class="product__description">
             <span>Монтаж:</span> без порчи окна - для установки не надо сверлить. Устанавливается на Z-образные крючки, либо металлические зацепы, либо на плунжерные крепления и барашки. <span>Монтаж анимает 5 минут, снимается за 1 минуту</span>
           </div>
-          <a href="#0" class="button product__button-1 button_hidden">Рассчитать стоимость</a>
+          <a data-goto=".calculator" href="#0" class="button product__button-1 button_hidden scroll-to-item">Рассчитать стоимость</a>
           <div class="product__time">
             <span>Сроки изготовления:</span> 3 дня
           </div>
@@ -209,7 +199,7 @@
           </div>
           <a href="#popup" class="button product__button-2 button_hidden popup-link">Заказать</a>
           <div class="product__buttons-mobile">
-            <a href="#0" class="button product__button-1">Рассчитать стоимость</a>
+            <a data-goto=".calculator" href="#0" class="button product__button-1 scroll-to-item">Рассчитать стоимость</a>
             <a href="#popup" class="button product__button-2 popup-link">Заказать</a>
           </div>
         </div>
@@ -218,7 +208,7 @@
     <img src="svg/triangle_left.svg" alt="Треугольник (декор)" class="product__triangle product__triangle_left">
   </div>
 
-  <div class="product">
+  <div class="product product-2">
     <div class="wrapper product__wrapper">
       <h2 class="title product__title">Вставные премиальные сетки</h2>
       <div class="product__container">
@@ -254,7 +244,7 @@
           <div class="product__description">
             <span>Монтаж:</span> не нужно сверлить окно. Не нужно даже высовывать сетку наружу. <span>Монтаж и демонтаж за 1 минуту</span>
           </div>
-          <a href="#0" class="button product__button-1 button_hidden">Рассчитать стоимость</a>
+          <a data-goto=".calculator" href="#0" class="button product__button-1 button_hidden scroll-to-item">Рассчитать стоимость</a>
           <div class="product__time">
             <span>Сроки изготовления:</span> 3 дня
           </div>
@@ -263,7 +253,7 @@
           </div>
           <a href="#popup" class="button product__button-2 button_hidden popup-link">Заказать</a>
           <div class="product__buttons-mobile">
-            <a href="#0" class="button product__button-1">Рассчитать стоимость</a>
+            <a data-goto=".calculator" href="#0" class="button product__button-1 scroll-to-item">Рассчитать стоимость</a>
             <a href="#popup" class="button product__button-2 popup-link">Заказать</a>
           </div>
         </div>
@@ -272,7 +262,7 @@
     <img src="svg/triangle_right_dual.svg" alt="Треугольник (декор)" class="product__triangle product__triangle_right">
   </div>
 
-  <div class="product">
+  <div class="product product-3">
     <div class="wrapper product__wrapper">
       <h2 class="title product__title">Сетки плиссе, гармошки</h2>
       <div class="product__container">
@@ -309,7 +299,7 @@
           <div class="product__description">
             <span>Монтаж:</span> на двухсторонний специальный вспененный скотч для того что бы не было щелей и на шурупы по углам. <span>Занимает 15 минут.</span>
           </div>
-          <a href="#0" class="button product__button-1 button_hidden">Рассчитать стоимость</a>
+          <a data-goto=".calculator" href="#0" class="button product__button-1 button_hidden scroll-to-item">Рассчитать стоимость</a>
           <div class="product__time">
             <span>Сроки изготовления:</span> 3 дня
           </div>
@@ -318,7 +308,7 @@
           </div>
           <a href="#popup" class="button product__button-2 button_hidden popup-link">Заказать</a>
           <div class="product__buttons-mobile">
-            <a href="#0" class="button product__button-1">Рассчитать стоимость</a>
+            <a data-goto=".calculator" href="#0" class="button product__button-1 scroll-to-item">Рассчитать стоимость</a>
             <a href="#popup" class="button product__button-2 popup-link">Заказать</a>
           </div>
         </div>
@@ -326,7 +316,7 @@
     </div>
   </div>
 
-  <div class="product">
+  <div class="product product-4">
     <div class="wrapper product__wrapper">
       <h2 class="title product__title">Детские, защищающие от выпадения</h2>
       <div class="product__container">
@@ -376,7 +366,7 @@
           </div>
           <a href="#popup" class="button product__button-2 button_hidden popup-link">Заказать</a>
           <div class="product__buttons-mobile">
-            <a href="#0" class="button product__button-1">Рассчитать стоимость</a>
+            <a data-goto=".calculator" href="#0" class="button product__button-1 scroll-to-item">Рассчитать стоимость</a>
             <a href="#popup" class="button product__button-2 popup-link">Заказать</a>
           </div>
         </div>

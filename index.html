@@ -31,7 +31,7 @@
         </a>
         <div class="header__contacts">
           <a href="tel:+79188032203" class="header__tel">+7 918 803 22 03</a>
-          <a href="#0" class="button header__button">Оставить заявку</a>
+          <a href="#popup" class="button header__button popup-link">Оставить заявку</a>
           <a href="#0" class="header__instagram">
             <img src="img/instagram.png" alt="Наш инстаграм">
           </a>
@@ -64,7 +64,7 @@
           </li>
           <li class="header__mobile">
             <a href="tel:+79188032203" class="header__tel">+7 918 803 22 03</a>
-            <a href="#0" class="button header__button">Оставить заявку</a>
+            <a href="#popup" class="button header__button popup-link">Оставить заявку</a>
             <div class="header__social">
               <a href="#0" class="header__instagram">
                 <img src="img/instagram.png" alt="Наш инстаграм">
@@ -87,7 +87,7 @@
         <div class="face__description">
           сетки 4х&nbsp;видов с&nbsp;дополнительными улучшениям:<br>с&nbsp;защитой для&nbsp;питомцев, гиппоалергенные или&nbsp;с&nbsp;защитой от&nbsp;пыльцы
         </div>
-        <a href="#0" class="button face__button">Заказать</a>
+        <a href="#popup" class="button face__button popup-link">Заказать</a>
       </div>
     </div>
   </div>
@@ -207,10 +207,10 @@
           <div class="product__delivery">
             <span>Доставка и монтаж:</span> 150 руб. за 1 шт.
           </div>
-          <a href="#0" class="button product__button-2 button_hidden">Заказать</a>
+          <a href="#popup" class="button product__button-2 button_hidden popup-link">Заказать</a>
           <div class="product__buttons-mobile">
             <a href="#0" class="button product__button-1">Рассчитать стоимость</a>
-            <a href="#0" class="button product__button-2">Заказать</a>
+            <a href="#popup" class="button product__button-2 popup-link">Заказать</a>
           </div>
         </div>
       </div>
@@ -261,10 +261,10 @@
           <div class="product__delivery">
             <span>Доставка и монтаж:</span> 400 руб. за 1 шт.
           </div>
-          <a href="#0" class="button product__button-2 button_hidden">Заказать</a>
+          <a href="#popup" class="button product__button-2 button_hidden popup-link">Заказать</a>
           <div class="product__buttons-mobile">
             <a href="#0" class="button product__button-1">Рассчитать стоимость</a>
-            <a href="#0" class="button product__button-2">Заказать</a>
+            <a href="#popup" class="button product__button-2 popup-link">Заказать</a>
           </div>
         </div>
       </div>
@@ -316,10 +316,10 @@
           <div class="product__delivery">
             <span>Доставка и монтаж:</span> 400 руб. за 1 шт.
           </div>
-          <a href="#0" class="button product__button-2 button_hidden">Заказать</a>
+          <a href="#popup" class="button product__button-2 button_hidden popup-link">Заказать</a>
           <div class="product__buttons-mobile">
             <a href="#0" class="button product__button-1">Рассчитать стоимость</a>
-            <a href="#0" class="button product__button-2">Заказать</a>
+            <a href="#popup" class="button product__button-2 popup-link">Заказать</a>
           </div>
         </div>
       </div>
@@ -374,10 +374,10 @@
           <div class="product__delivery">
             <span>Доставка и монтаж:</span> 400 руб. за 1 шт.
           </div>
-          <a href="#0" class="button product__button-2 button_hidden">Заказать</a>
+          <a href="#popup" class="button product__button-2 button_hidden popup-link">Заказать</a>
           <div class="product__buttons-mobile">
             <a href="#0" class="button product__button-1">Рассчитать стоимость</a>
-            <a href="#0" class="button product__button-2">Заказать</a>
+            <a href="#popup" class="button product__button-2 popup-link">Заказать</a>
           </div>
         </div>
       </div>
@@ -540,7 +540,7 @@
           </div>
         </div>
         <div class="header__contacts footer__contacts">
-          <a href="#0" class="button header__button">Оставить заявку</a>
+          <a href="#popup" class="button header__button popup-link">Оставить заявку</a>
           <div class="header__social footer__social">
             <a href="#0" class="header__instagram">
               <img src="img/instagram.png" alt="Наш инстаграм">
@@ -554,7 +554,25 @@
     </div>
   </footer>
 
+  <aside class="popup" id="popup">
+    <div class="popup__body">
+      <div class="popup__content">
+        <button type="button" class="popup__close">
+      <span class="visually-hidden">Крестик - закрывает форму (модальное окно) при нажатии</span>
+    </button>
+        <h4 class="title popup__title">Напишите свое имя и телефон и&nbsp;мы&nbsp;Вам&nbsp;перезвоним</h4>
+        <form action="sendmail.php" method="POST" class="popup__form">
+          <input type="text" name="name" class="popup__input popup__name" placeholder="Введите имя" required>
+          <!-- <input type="email" name="email" class="popup__input popup__email" placeholder="Введите email" required> -->
+          <input type="tel" name="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup__input popup__tel" placeholder="Введите телефон" required>
+          <button type="submit" class="button popup__button">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+  </aside>
+
   <script src="js/burger&&scroll.js"></script>
+  <script src="js/popup.js"></script>
 </body>
 
 </html>

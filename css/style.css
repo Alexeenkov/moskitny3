@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ! ------------------------fonts-------------------- */
 @import url("https://fonts.googleapis.com/css?family=Lato:regular,700,900&display=swap");
 @font-face {
@@ -75,8 +76,8 @@ html.lock {
 }
 
 ._scroll {
-  -webkit-transform: translateY(20%);
-          transform: translateY(20%);
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
   opacity: 0;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
@@ -554,8 +555,12 @@ html.lock {
 }
 .product__gallery {
   max-width: 550px;
+  width: 100%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 }
 .product__content {
   margin-left: 60px;
@@ -647,7 +652,14 @@ html.lock {
   cursor: pointer;
 }
 .gallery__image img {
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   max-width: 100%;
+}
+.gallery__image img:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .gallery__buttons {
   display: -webkit-box;
@@ -813,6 +825,173 @@ html.lock {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.range {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.range_margin {
+  margin-top: 32px;
+}
+.range__title {
+  margin-bottom: 35px;
+}
+.range__container {
+  position: relative;
+  width: 100%;
+  max-width: 377px;
+}
+.range__values {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 302px;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #262626;
+  font-size: 12px;
+  font-weight: 400;
+}
+.range__value {
+  margin-top: -4px;
+}
+.range__input {
+  position: relative;
+  width: 100%;
+  max-width: 302px;
+  margin-left: 37px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Скрывает слайдер, чтобы можно было создать свой */
+  appearance: none;
+}
+.range__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Скрывает слайдер, чтобы можно было создать свой */
+  appearance: none;
+}
+.range__input:focus {
+  /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
+  outline: none;
+}
+.range__input::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.range__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #ffbc2a;
+  cursor: pointer;
+  /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
+  margin-top: -11px;
+}
+.range__input::-moz-range-thumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #ffbc2a;
+  cursor: pointer;
+}
+.range__input::-ms-thumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #ffbc2a;
+  cursor: pointer;
+}
+.range__input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: #ffbc2a;
+  border-radius: 1px;
+}
+.range__input:focus::-webkit-slider-runnable-track {
+  background: #a78a07;
+}
+.range__input:focus::-webkit-slider-thumb {
+  background: #a78a07;
+}
+.range__input::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #ffbc2a;
+  border-radius: 1.3px;
+}
+.range__input::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+.range__input::-ms-fill-lower {
+  background: #ffbc2a;
+  border-radius: 2.6px;
+}
+.range__input:focus::-ms-fill-lower {
+  background: #a78a07;
+}
+.range__input::-ms-fill-upper {
+  background: #ffbc2a;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.range__input:focus::-ms-fill-upper {
+  background: #a78a07;
+}
+.range__button {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #ffbc2a;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  color: #262626;
+  font-size: 18px;
+  font-weight: 700;
+}
+.range__button_right {
+  top: 0px;
+  right: 0px;
+}
+.range__button_left {
+  top: 0px;
+  left: 0px;
+}
+
 .instruction {
   padding-top: 178px;
   padding-bottom: 162px;

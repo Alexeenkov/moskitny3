@@ -82,7 +82,7 @@ html.lock {
 }
 
 ._scroll {
-  transform: translateY(20%);
+  transform: translateY(10%);
   opacity: 0;
   transition: all .8s ease;
   &._active {
@@ -518,7 +518,9 @@ html.lock {
   }
   &__gallery {
     max-width: 550px;
+    width: 100%;
     flex-shrink: 0;
+    flex-grow: 0;
   }
   &__content {
     margin-left: 60px;
@@ -608,7 +610,15 @@ html.lock {
     width: 24%;
     cursor: pointer;
     & img {
+      position: relative;
+      transition: all .3s ease;
       max-width: 100%;
+      &:hover {
+        // box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      }
+      &:active {
+        box-shadow: none;
+      }
     }
   }
   &__buttons {
@@ -755,8 +765,161 @@ html.lock {
 }
 
 .range {
-  &__title {}
-  &__input {}
+  display: flex;
+  flex-direction: column;
+  &_margin {
+    margin-top: 32px;
+  }
+  &__title {
+    margin-bottom: 35px;
+  }
+  &__container {
+    position: relative;
+    width: 100%;
+    max-width: 377px;
+  }
+  &__values {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 302px;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #262626;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  &__min-value {}
+  &__value {
+    margin-top: -4px;
+  }
+  &__max-value {}
+  &__input {
+    position: relative;
+    width: 100%;
+    max-width: 302px;
+    margin-left: 37px;
+    // ! Скрываем стандартный ползунок:
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Скрывает слайдер, чтобы можно было создать свой */
+    appearance: none;
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      /* Скрывает слайдер, чтобы можно было создать свой */
+      appearance: none;
+    }
+    &:focus {
+      /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
+      outline: none;
+    }
+    &::-ms-track {
+      width: 100%;
+      cursor: pointer;
+      /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+    // ! Кругляшок:
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background: #ffbc2a;
+      cursor: pointer;
+      /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
+      margin-top: -11px;
+    }
+    &::-moz-range-thumb {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background: #ffbc2a;
+      cursor: pointer;
+    }
+    &::-ms-thumb {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background: #ffbc2a;
+      cursor: pointer;
+    }
+    // ! Полоса:
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 3px;
+      cursor: pointer;
+      background: #ffbc2a;
+      border-radius: 1px;
+    }
+    &:focus::-webkit-slider-runnable-track {
+      background: #a78a07;
+    }
+    &:focus::-webkit-slider-thumb {
+      background: #a78a07;
+    }
+    &::-moz-range-track {
+      width: 100%;
+      height: 8.4px;
+      cursor: pointer;
+      background: #ffbc2a;
+      border-radius: 1.3px;
+    }
+    &::-ms-track {
+      width: 100%;
+      height: 8.4px;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      border-width: 16px 0;
+      color: transparent;
+    }
+    // ! Для IE 10+
+    &::-ms-fill-lower {
+      background: #ffbc2a;
+      border-radius: 2.6px;
+    }
+    &:focus::-ms-fill-lower {
+      background: #a78a07;
+    }
+    &::-ms-fill-upper {
+      background: #ffbc2a;
+      border: 0.2px solid #010101;
+      border-radius: 2.6px;
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    }
+    &:focus::-ms-fill-upper {
+      background: #a78a07;
+    }
+    // ! Кнопки:
+  }
+  &__button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffbc2a;
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    color: #262626;
+    font-size: 18px;
+    font-weight: 700;
+    &_right {
+      top: 0px;
+      right: 0px;
+    }
+    &_left {
+      top: 0px;
+      left: 0px;
+    }
+  }
 }
 
 .instruction {

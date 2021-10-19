@@ -165,17 +165,17 @@
             <img src="img/product_main_1.jpg" alt="Обычные москитные сетки">
           </div>
           <ul class="gallery__images">
-            <li class="gallery__image">
-              <img src="img/product_1.png" alt="Обычные москитные сетки">
+            <li class="gallery__image active">
+              <img data-big="img/product_main_1.jpg" src="img/product_1.png" alt="Обычные москитные сетки">
             </li>
             <li class="gallery__image">
-              <img src="img/product_1.png" alt="Обычные москитные сетки">
+              <img data-big="img/product_main_2.jpg" src="img/product_2.png" alt="Обычные москитные сетки">
             </li>
             <li class="gallery__image">
-              <img src="img/product_1.png" alt="Обычные москитные сетки">
+              <img data-big="img/product_main_3.jpg" src="img/product_3.png" alt="Обычные москитные сетки">
             </li>
             <li class="gallery__image">
-              <img src="img/product_1.png" alt="Обычные москитные сетки">
+              <img data-big="img/product_main_4.jpg" src="img/product_4.png" alt="Обычные москитные сетки">
             </li>
           </ul>
           <div class="gallery__buttons">
@@ -217,17 +217,17 @@
             <img src="img/product_main_2.jpg" alt="Обычные москитные сетки">
           </div>
           <ul class="gallery__images">
-            <li class="gallery__image">
-              <img src="img/product_2.png" alt="Обычные москитные сетки">
+            <li class="gallery__image active">
+              <img data-big="img/product_main_1.jpg" src="img/product_1.png" alt="Обычные москитные сетки">
             </li>
             <li class="gallery__image">
-              <img src="img/product_2.png" alt="Обычные москитные сетки">
+              <img data-big="img/product_main_2.jpg" src="img/product_2.png" alt="Обычные москитные сетки">
             </li>
             <li class="gallery__image">
-              <img src="img/product_2.png" alt="Обычные москитные сетки">
+              <img data-big="img/product_main_3.jpg" src="img/product_3.png" alt="Обычные москитные сетки">
             </li>
             <li class="gallery__image">
-              <img src="img/product_2.png" alt="Обычные москитные сетки">
+              <img data-big="img/product_main_4.jpg" src="img/product_4.png" alt="Обычные москитные сетки">
             </li>
           </ul>
           <div class="gallery__buttons">
@@ -268,20 +268,20 @@
       <div class="product__container">
         <div class="product__gallery gallery">
           <div class="gallery__main">
-            <img src="img/product_main_3.jpg" alt="Обычные москитные сетки">
+            <img data-big="img/product_main_1.jpg" src="img/product_main_3.jpg" alt="Обычные москитные сетки">
           </div>
           <ul class="gallery__images">
-            <li class="gallery__image">
-              <img src="img/product_3.png" alt="Обычные москитные сетки">
+            <li class="gallery__image active">
+              <img data-big="img/product_main_1.jpg" src="img/product_1.png" alt="Обычные москитные сетки">
             </li>
             <li class="gallery__image">
-              <img src="img/product_3.png" alt="Обычные москитные сетки">
+              <img data-big="img/product_main_2.jpg" src="img/product_2.png" alt="Обычные москитные сетки">
             </li>
             <li class="gallery__image">
-              <img src="img/product_3.png" alt="Обычные москитные сетки">
+              <img data-big="img/product_main_3.jpg" src="img/product_3.png" alt="Обычные москитные сетки">
             </li>
             <li class="gallery__image">
-              <img src="img/product_3.png" alt="Обычные москитные сетки">
+              <img data-big="img/product_main_4.jpg" src="img/product_4.png" alt="Обычные москитные сетки">
             </li>
           </ul>
           <div class="gallery__buttons">
@@ -322,20 +322,20 @@
       <div class="product__container">
         <div class="product__gallery gallery">
           <div class="gallery__main">
-            <img src="img/product_main_4.jpg" alt="Обычные москитные сетки">
+            <img data-big="img/product_main_1.jpg" src="img/product_main_4.jpg" alt="Обычные москитные сетки">
           </div>
           <ul class="gallery__images">
-            <li class="gallery__image">
-              <img src="img/product_4.png" alt="Обычные москитные сетки">
+            <li class="gallery__image active">
+              <img data-big="img/product_main_1.jpg" src="img/product_1.png" alt="Обычные москитные сетки">
             </li>
             <li class="gallery__image">
-              <img src="img/product_4.png" alt="Обычные москитные сетки">
+              <img data-big="img/product_main_2.jpg" src="img/product_2.png" alt="Обычные москитные сетки">
             </li>
             <li class="gallery__image">
-              <img src="img/product_4.png" alt="Обычные москитные сетки">
+              <img data-big="img/product_main_3.jpg" src="img/product_3.png" alt="Обычные москитные сетки">
             </li>
             <li class="gallery__image">
-              <img src="img/product_4.png" alt="Обычные москитные сетки">
+              <img data-big="img/product_main_4.jpg" src="img/product_4.png" alt="Обычные москитные сетки">
             </li>
           </ul>
           <div class="gallery__buttons">
@@ -394,11 +394,29 @@
             <span class="calculator__subtitle">2.Введите размер</span>
             <div class="range">
               <span class="range__title">Ширина в см</span>
-              <input type="range" class="range__input">
+              <div class="range__container">
+                <div class="range__values">
+                  <div class="range__min-value">20 см</div>
+                  <div class="range__value"><span></span> см</div>
+                  <div class="range__max-value">80 см</div>
+                </div>
+                <input type="range" class="range__input" min="20" max="100" step="5" value="60">
+                <button type="button" class="range__button range__button_left">-</button>
+                <button type="button" class="range__button range__button_right">+</button>
+              </div>
             </div>
-            <div class="range">
+            <div class="range range_margin">
               <span class="range__title">Высота в см</span>
-              <input type="range" class="range__input">
+              <div class="range__container">
+                <div class="range__values">
+                  <div class="range__min-value">20 см</div>
+                  <div class="range__value"><span></span> см</div>
+                  <div class="range__max-value">80 см</div>
+                </div>
+                <input type="range" class="range__input" min="20" max="100" step="5" value="60">
+                <button type="button" class="range__button range__button_left">-</button>
+                <button type="button" class="range__button range__button_right">+</button>
+              </div>
             </div>
 
             <span class="calculator__subtitle">3.Выберите цвет</span>
@@ -564,6 +582,7 @@
   <script src="js/burger&&scroll.js"></script>
   <script src="js/popup.js"></script>
   <script src="js/animation-scroll.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 
 </html>

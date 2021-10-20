@@ -290,6 +290,17 @@ html.lock {
   margin-right: 0;
 }
 
+#map {
+  width: 100%;
+  height: 420px;
+}
+
+#map-mobile {
+  display: none;
+  width: 100%;
+  height: 420px;
+}
+
 .burger {
   display: none;
 }
@@ -1479,9 +1490,6 @@ html.lock {
   .contacts__description {
     margin-bottom: 5px;
   }
-  .contacts__map img {
-    width: 120%;
-  }
 
   .footer__tel {
     font-size: 16px;
@@ -1811,11 +1819,6 @@ html.lock {
     text-align: center;
   }
 
-  .contacts__map {
-    position: relative;
-    left: -300px;
-    width: 150%;
-  }
   .contacts__address {
     font-size: 20px;
   }
@@ -1900,10 +1903,27 @@ html.lock {
   }
 }
 @media (max-width: 615px) {
+  #map {
+    display: none;
+  }
+
+  #map-mobile {
+    display: block;
+  }
+
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
   .contacts__content {
+    position: relative;
     width: 100%;
     left: 0;
-    top: 0;
   }
 }
 @media (max-width: 521px) {

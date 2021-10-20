@@ -22,10 +22,10 @@
         <div class="header__contacts">
           <a href="tel:+79188032203" class="header__tel">+7 918 803 22 03</a>
           <a href="#popup" class="button header__button popup-link">Оставить заявку</a>
-          <a href="#0" class="header__instagram">
+          <a href="https://www.instagram.com/askitrim" target="_blank" class="header__instagram">
             <img src="img/instagram.png" alt="Наш инстаграм">
           </a>
-          <a href="#0" class="header__vk">
+          <a href="https://vk.com/askitrim" target="_blank" class="header__vk">
             <img src="img/vk.png" alt="Наш ВК">
           </a>
         </div>
@@ -56,10 +56,10 @@
             <a href="tel:+79188032203" class="header__tel">+7 918 803 22 03</a>
             <a href="#popup" class="button header__button popup-link">Оставить заявку</a>
             <div class="header__social">
-              <a href="#0" class="header__instagram">
+              <a href="https://www.instagram.com/askitrim" target="_blank" class="header__instagram">
                 <img src="img/instagram.png" alt="Наш инстаграм">
               </a>
-              <a href="#0" class="header__vk">
+              <a href="https://vk.com/askitrim" target="_blank" class="header__vk">
                 <img src="img/vk.png" alt="Наш ВК">
               </a>
             </div>
@@ -357,7 +357,7 @@
           <div class="product__description">
             <span>Монтаж:</span> без порчи окна - для установки не надо сверлить.<span> Монтаж занимает 5 минут, снимается за 1 минуту.</span>
           </div>
-          <a href="#0" class="button product__button-1 button_hidden">Рассчитать стоимость</a>
+          <a data-goto=".calculator" href="#0" class="button product__button-1 button_hidden scroll-to-item">Рассчитать стоимость</a>
           <div class="product__time">
             <span>Сроки изготовления:</span> 3 дня
           </div>
@@ -381,14 +381,14 @@
         <h2 class="title calculator__title">
           Рассчитайте стоимость
         </h2>
-        <form action="#" class="calculator__form">
+        <form id="calculator" action="#" method="POST" class="calculator__form">
           <div class="calculator__left-col">
             <span class="calculator__subtitle">1.Выберите тип сетки</span>
-            <select name="select" id="name" class="calculator__select">
+            <select id="calc-select" name="select" id="name" class="calculator__select">
               <option value="Обычная" selected>Обычная</option>
-              <option value="Обычная">Премиальная</option>
-              <option value="Обычная">Плиссе, гармошка</option>
-              <option value="Обычная">Детская, защищающая от выпадения</option>
+              <option value="Премиальная">Премиальная</option>
+              <option value="Плиссе">Плиссе, гармошка</option>
+              <option value="Детская">Детская, защищающая от выпадения</option>
             </select>
 
             <span class="calculator__subtitle">2.Введите размер</span>
@@ -397,12 +397,12 @@
               <div class="range__container">
                 <div class="range__values">
                   <div class="range__min-value">20 см</div>
-                  <div class="range__value"><span></span> см</div>
-                  <div class="range__max-value">80 см</div>
+                  <div class="range__value"><span id="calc-width-value">60</span> см</div>
+                  <div class="range__max-value">100 см</div>
                 </div>
-                <input type="range" class="range__input" min="20" max="100" step="5" value="60">
-                <button type="button" class="range__button range__button_left">-</button>
-                <button type="button" class="range__button range__button_right">+</button>
+                <input id="calc-width" type="range" class="range__input" min="20" max="100" step="5" value="60">
+                <a href="#0" type="button" class="range__button range__button_left">-</a>
+                <a href="#0" type="button" class="range__button range__button_right">+</a>
               </div>
             </div>
             <div class="range range_margin">
@@ -410,63 +410,63 @@
               <div class="range__container">
                 <div class="range__values">
                   <div class="range__min-value">20 см</div>
-                  <div class="range__value"><span></span> см</div>
-                  <div class="range__max-value">80 см</div>
+                  <div class="range__value"><span id="calc-height-value">60</span> см</div>
+                  <div class="range__max-value">100 см</div>
                 </div>
-                <input type="range" class="range__input" min="20" max="100" step="5" value="60">
-                <button type="button" class="range__button range__button_left">-</button>
-                <button type="button" class="range__button range__button_right">+</button>
+                <input id="calc-height" type="range" class="range__input" min="20" max="100" step="5" value="60">
+                <a href="#0" class="range__button range__button_left">-</a>
+                <a href="#0" class="range__button range__button_right">+</a>
               </div>
             </div>
 
             <span class="calculator__subtitle">3.Выберите цвет</span>
             <div class="calculator__container">
               <label>
-                <input name="color" type="radio" class="calculator__radio">
+                <input name="color" type="radio" class="calculator__radio" value="Белый" checked>
                 <span class="calculator__radio-name">Белый</span>
               </label>
               <label class="calculator_margin-top">
-                <input name="color" type="radio" class="calculator__radio">
+                <input name="color" type="radio" class="calculator__radio" value="Коричневый">
                 <span class="calculator__radio-name">Коричневый</span>
               </label>
             </div>
           </div>
 
           <div class="calculator__right-col">
-            <span class="calculator__subtitle">4.Выберите полотно</span>
-            <div class="calculator__container calculator__box">
+            <span id="canvas-title" class="calculator__subtitle _hide">4.Выберите полотно</span>
+            <div id="canvas-section" class="calculator__container calculator__box _hide">
               <label>
-                <input name="option" type="radio" class="calculator__radio">
+                <input name="canvas" type="radio" class="calculator__radio" value='Стандарт' checked>
                 <span class="calculator__radio-name">Стандарт</span>
               </label>
               <label class="calculator_margin-top">
-                <input name="option" type="radio" class="calculator__radio">
+                <input name="canvas" type="radio" class="calculator__radio" value='Мошка'>
                 <span class="calculator__radio-name">Анти-мошка</span>
               </label>
               <label class="calculator_margin-top">
-                <input name="option" type="radio" class="calculator__radio">
+                <input name="canvas" type="radio" class="calculator__radio" value='Пыльца'>
                 <span class="calculator__radio-name">Анти-пыльца</span>
               </label>
               <label class="calculator_margin-top">
-                <input name="option" type="radio" class="calculator__radio">
+                <input name="canvas" type="radio" class="calculator__radio" value='Кошка'>
                 <span class="calculator__radio-name">Анти-кошка</span>
               </label>
             </div>
 
-            <span class="calculator__subtitle">5.Выберите проём</span>
-            <div class="calculator__container">
+            <span id="opening-title" class="calculator__subtitle _hide">4.Выберите проём</span>
+            <div id="opening-section" class="calculator__container _hide">
               <label>
-                <input name="type" type="radio" class="calculator__radio">
+                <input name="opening" type="radio" class="calculator__radio" value='Дверь' checked>
                 <span class="calculator__radio-name">Дверь</span>
               </label>
               <label class="calculator_margin-top">
-                <input name="type" type="radio" class="calculator__radio">
+                <input name="opening" type="radio" class="calculator__radio" value='Окно'>
                 <span class="calculator__radio-name">Окно</span>
               </label>
             </div>
 
             <div class="calculator__price">
-              Цена: <span id="price">0</span> р
+              Цена: <span id="price">900</span> р
             </div>
             <button type="submit" class="button calculator__button">Заказать</button>
           </div>
@@ -550,10 +550,10 @@
         <div class="header__contacts footer__contacts">
           <a href="#popup" class="button header__button popup-link">Оставить заявку</a>
           <div class="header__social footer__social">
-            <a href="#0" class="header__instagram">
+            <a href="https://www.instagram.com/askitrim" target="_blank" class="header__instagram">
               <img src="img/instagram.png" alt="Наш инстаграм">
             </a>
-            <a href="#0" class="header__vk">
+            <a href="https://vk.com/askitrim" target="_blank" class="header__vk">
               <img src="img/vk.png" alt="Наш ВК">
             </a>
           </div>
@@ -569,7 +569,7 @@
       <span class="visually-hidden">Крестик - закрывает форму (модальное окно) при нажатии</span>
     </button>
         <h4 class="title popup__title">Напишите свое имя и телефон и&nbsp;мы&nbsp;Вам&nbsp;перезвоним</h4>
-        <form action="sendmail.php" method="POST" class="popup__form">
+        <form action="#" method="POST" class="popup__form">
           <input type="text" name="name" class="popup__input popup__name" placeholder="Введите имя" required>
           <!-- <input type="email" name="email" class="popup__input popup__email" placeholder="Введите email" required> -->
           <input type="tel" name="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup__input popup__tel" placeholder="Введите телефон" required>
@@ -583,6 +583,7 @@
   <script src="js/popup.js"></script>
   <script src="js/animation-scroll.js"></script>
   <script src="js/slider.js"></script>
+  <script src="js/calculator.js"></script>
 </body>
 
 </html>

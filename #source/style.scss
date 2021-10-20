@@ -91,6 +91,11 @@ html.lock {
   }
 }
 
+._hide {
+  position: absolute;
+  opacity: 0;
+}
+
 .button {
   display: inline-block;
   position: relative;
@@ -1720,8 +1725,7 @@ html.lock {
     &__content {
       width: 100%;
       left: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 0;
     }
   }
 }
@@ -1831,6 +1835,20 @@ html.lock {
   }
 }
 
+@media (max-width: 467px) {
+  .range {
+    &__container {
+      max-width: 269px;
+    }
+    &__values {
+      max-width: 194px;
+    }
+    &__input {
+      max-width: 194px;
+    }
+  }
+}
+
 @media (max-width: 439px) {
   .popup {
     &__title {
@@ -1838,6 +1856,14 @@ html.lock {
     }
     &__content {
       padding: 60px 20px;
+    }
+  }
+  .contacts {
+    &__address {
+      font-size: 19px;
+    }
+    &__description {
+      font-size: 18px;
     }
   }
 }
@@ -1884,6 +1910,17 @@ html.lock {
     }
     &__description {
       font-size: 16px;
+    }
+  }
+  .range {
+    &__container {
+      max-width: 245px;
+    }
+    &__values {
+      max-width: 170px;
+    }
+    &__input {
+      max-width: 170px;
     }
   }
 }

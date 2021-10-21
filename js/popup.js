@@ -2,6 +2,9 @@ const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
 const html = document.querySelector('html');
+const popupTitle = document.querySelector('.popup__title');
+const popupEmail = document.querySelector('.popup__email');
+const popupButton = document.querySelector('.popup__button');
 
 let unlock = true;
 
@@ -11,6 +14,25 @@ if (popupLinks.length > 0) {
   for (let index = 0; index < popupLinks.length; index++) {
     const popupLink = popupLinks[index];
     popupLink.addEventListener("click", function(e) {
+      // ? Изменение заголовков форм и добавление полей в зависимости от нажатой кнопки:
+      if (e.target.classList.contains('product__button-2') && e.target.closest('.product').classList.contains('product-1')) {
+        popupTitle.textContent = 'Закажите обычные москитные сетки';
+      } else if (e.target.classList.contains('product__button-2') && e.target.closest('.product').classList.contains('product-2')) {
+        popupTitle.textContent = 'Закажите вставные премиальные сетки';
+      } else if (e.target.classList.contains('product__button-2') && e.target.closest('.product').classList.contains('product-3')) {
+        popupTitle.textContent = 'Закажите сетки плиссе, гармошки';
+      } else if (e.target.classList.contains('product__button-2') && e.target.closest('.product').classList.contains('product-4')) {
+        popupTitle.textContent = 'Закажите детские сетки, защищающие от выпадения';
+      } else if (e.target.classList.contains('instruction__button')) {
+        popupTitle.textContent = 'Заполните форму и получите инструкцию';
+        popupEmail.classList.remove('_hide');
+        popupButton.textContent = 'Получить инструкцию';
+      } else {
+        popupTitle.innerHTML = 'Напишите свое имя и телефон и&nbsp;мы&nbsp;Вам&nbsp;перезвоним';
+        popupButton.textContent = 'Оставить заявку';
+        popupEmail.classList.add('_hide');
+      }
+
       const popupName = popupLink.getAttribute('href').replace('#', '');
       const curentPopup = document.getElementById(popupName);
       popupOpen(curentPopup);

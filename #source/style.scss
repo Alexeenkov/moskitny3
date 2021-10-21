@@ -92,13 +92,16 @@ html.lock {
 }
 
 ._hide {
+  display: none;
   position: absolute;
   opacity: 0;
+  left: -100%;
 }
 
 .button {
   display: inline-block;
   position: relative;
+  z-index: 20;
   top: 0;
   font-family: "Bebas Neue Bold", "Arial", "Helvetica", sans-serif;
   font-size: 20px;
@@ -174,7 +177,7 @@ html.lock {
   z-index: 100;
   font-weight: 700;
   font-size: 18px;
-  padding: 24px 0px 20px;
+  padding: 8px 0px;
   background-color: #fff;
   &__wrapper {
     width: 100%;
@@ -187,7 +190,7 @@ html.lock {
   &__top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
   }
   &__logo {
     width: 207px;
@@ -338,7 +341,7 @@ html.lock {
 
 .option {
   transform: translateY(-103px);
-  margin-bottom: 174px;
+  margin-bottom: 15px;
   &__wrapper {
     width: 100%;
     max-width: 1200px;
@@ -666,7 +669,7 @@ html.lock {
 .calculator {
   background-color: #f9f9f9;
   padding: 60px 0 75px;
-  margin-top: 229px;
+  margin-top: 100px;
   &__wrapper {
     max-width: 1040px;
     padding: 25px 90px 45px;
@@ -793,6 +796,17 @@ html.lock {
     position: relative;
     width: 100%;
     max-width: 377px;
+  }
+  &__error {
+    margin-top: 40px;
+    width: 100%;
+    color: rgb(207, 5, 5);
+    font-weight: 400;
+    border: 1px solid rgb(207, 5, 5);
+    background-color: rgba(207, 5, 5, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
   }
   &__values {
     position: absolute;
@@ -939,8 +953,7 @@ html.lock {
 }
 
 .instruction {
-  padding-top: 178px;
-  padding-bottom: 162px;
+  padding: 70px 0;
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -1080,7 +1093,7 @@ html.lock {
   width: 100%;
   color: #262626;
   font-weight: 700;
-  margin: 175px 0 60px;
+  margin: 100px 0 60px;
   &__map {
     width: 100%;
     & img {
@@ -1332,7 +1345,6 @@ html.lock {
     }
   }
   .calculator {
-    margin-top: 140px;
     &__wrapper {
       padding-left: 40px;
       padding-right: 40px;
@@ -1507,7 +1519,6 @@ html.lock {
     }
   }
   .option {
-    margin-bottom: 57px;
     &__wrapper {
       max-width: 554px;
     }
@@ -1630,8 +1641,6 @@ html.lock {
     }
   }
   .instruction {
-    padding-top: 185px;
-    padding-bottom: 150px;
     &__wrapper {
       flex-direction: column-reverse;
     }
@@ -1743,7 +1752,7 @@ html.lock {
   .face {
     padding-top: 210px;
     &__container {
-      padding: 20px;
+      padding: 20px 7px;
     }
     &__title {
       font-size: 23px;
@@ -1761,6 +1770,7 @@ html.lock {
     padding-bottom: 0;
     &__card {
       width: 48%;
+      min-height: 350px;
     }
     &__title {
       font-size: 24px;

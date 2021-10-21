@@ -17,10 +17,11 @@ const canvasTitle = document.getElementById('canvas-title');
 const openingTitle = document.getElementById('opening-title');
 const canvasSection = document.getElementById('canvas-section');
 const openingSection = document.getElementById('opening-section');
+const rangeError = document.querySelector('.range__error');
 
 let selectValue = 'Обычная',
-  widthValue = 60,
-  heightValue = 60,
+  widthValue = 110,
+  heightValue = 110,
   colorValue = 'Белый',
   canvasValue = 'Стандарт',
   openingValue = 'Дверь',
@@ -67,7 +68,7 @@ widthButtonLeft.addEventListener('click', () => {
   }
 });
 widthButtonRight.addEventListener('click', () => {
-  if (widthValue < 100) {
+  if (widthValue < 200) {
     widthValue = Number(widthValue) + 5;
     showWidthValue(widthValue);
     calc();
@@ -81,7 +82,7 @@ heightButtonLeft.addEventListener('click', () => {
   }
 });
 heightButtonRight.addEventListener('click', () => {
-  if (heightValue < 100) {
+  if (heightValue < 200) {
     heightValue = Number(heightValue) + 5;
     showHeightValue(heightValue);
     calc();
@@ -100,6 +101,14 @@ function showHeightValue(heightValue) {
 
 function calc() {
   let S = (widthValue / 100) * (heightValue / 100);
+
+  if (selectValue === 'Обычная' && S > 1.5) {
+    rangeError.classList.remove('_hide');
+  }
+  if (selectValue === 'Обычная' && S <= 1.5) {
+    rangeError.classList.add('_hide');
+  }
+
   if (selectValue === 'Обычная' && colorValue === 'Белый') {
     priceValue = 900;
   }

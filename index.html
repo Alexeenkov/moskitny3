@@ -397,10 +397,10 @@
               <div class="range__container">
                 <div class="range__values">
                   <div class="range__min-value">20 см</div>
-                  <div class="range__value"><span id="calc-width-value">60</span> см</div>
-                  <div class="range__max-value">100 см</div>
+                  <div class="range__value"><span id="calc-width-value">110</span> см</div>
+                  <div class="range__max-value">200 см</div>
                 </div>
-                <input id="calc-width" type="range" class="range__input" min="20" max="100" step="5" value="60">
+                <input id="calc-width" type="range" class="range__input" min="20" max="200" step="5" value="110">
                 <a href="#0" type="button" class="range__button range__button_left">-</a>
                 <a href="#0" type="button" class="range__button range__button_right">+</a>
               </div>
@@ -410,13 +410,14 @@
               <div class="range__container">
                 <div class="range__values">
                   <div class="range__min-value">20 см</div>
-                  <div class="range__value"><span id="calc-height-value">60</span> см</div>
-                  <div class="range__max-value">100 см</div>
+                  <div class="range__value"><span id="calc-height-value">110</span> см</div>
+                  <div class="range__max-value">200 см</div>
                 </div>
-                <input id="calc-height" type="range" class="range__input" min="20" max="100" step="5" value="60">
+                <input id="calc-height" type="range" class="range__input" min="20" max="200" step="5" value="110">
                 <a href="#0" class="range__button range__button_left">-</a>
                 <a href="#0" class="range__button range__button_right">+</a>
               </div>
+              <span class="range__error _hide">Превышен максимально допустимый размер</span>
             </div>
 
             <span class="calculator__subtitle">3.Выберите цвет</span>
@@ -484,7 +485,7 @@
         <div class="instruction__description">
           по самостоятельной замерке окна для сетки
         </div>
-        <a href="#0" class="button instruction__button">Получить инструкцию</a>
+        <a href="#popup" class="button instruction__button popup-link">Получить инструкцию</a>
       </div>
       <div class="instruction__img">
         <img src="img/instruction_book.png" alt="Инструкция">
@@ -572,6 +573,7 @@
         <h4 class="title popup__title">Напишите свое имя и телефон и&nbsp;мы&nbsp;Вам&nbsp;перезвоним</h4>
         <form action="#" method="POST" class="popup__form">
           <input type="text" name="name" class="popup__input popup__name" placeholder="Введите имя" required>
+          <input type="email" name="email" class="popup__input popup__email _hide" placeholder="Введите e-mail">
           <!-- <input type="email" name="email" class="popup__input popup__email" placeholder="Введите email" required> -->
           <input type="tel" name="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup__input popup__tel" placeholder="Введите телефон" required>
           <button type="submit" class="button popup__button">Отправить заявку</button>

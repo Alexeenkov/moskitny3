@@ -16,9 +16,9 @@ if (lazyImages.length > 0) {
 window.addEventListener('scroll', lazyScroll);
 
 function lazyScroll() {
-  if (document.querySelectorAll('img[data-src]').length > 0) {
-    lazyScrollCheck();
-  }
+  // if (document.querySelectorAll('img[data-src]').length > 0) {
+  //   lazyScrollCheck();
+  // }
   if (!loadMapBlock.classList.contains('_loaded')) {
     getMap();
   }

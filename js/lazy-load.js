@@ -40,7 +40,6 @@ function lazyScrollCheck() {
 function getMap() {
   const loadMapBlockPos = loadMapBlock.getBoundingClientRect().top + scrollY;
   if (scrollY > loadMapBlockPos - windowHeight) {
-    console.log('Карта должна грузиться!');
     // Функция ymaps.ready() будет вызвана, когда
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
     ymaps.ready(init);

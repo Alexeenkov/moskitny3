@@ -98,6 +98,13 @@ html.lock {
   left: -100%;
 }
 
+.load-item {
+  background-image: url('../img/loading.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
 .button {
   display: inline-block;
   position: relative;

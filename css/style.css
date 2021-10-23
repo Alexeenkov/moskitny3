@@ -644,6 +644,8 @@ html.lock {
 .gallery__main {
   position: relative;
   width: 100%;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 .gallery__main::before {
   content: "";
@@ -1324,18 +1326,6 @@ html.lock {
   -webkit-transform: perspective(600px) translateY(-200%) rotateX(45deg);
           transform: perspective(600px) translateY(-200%) rotateX(45deg);
 }
-.popup__content::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 217px;
-  height: 217px;
-  border-radius: 100%;
-  background: linear-gradient(147.31deg, rgba(255, 255, 255, 0.17) 45.74%, rgba(230, 230, 230, 0) 86.05%);
-  opacity: 0.2;
-  top: 27px;
-  left: 27px;
-}
 .popup__close {
   position: absolute;
   right: 20px;
@@ -1452,6 +1442,56 @@ html.lock {
   transition: all 0.3s ease;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.438);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.438);
+}
+
+.slider {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.slider__body {
+  padding: 0 43px;
+}
+.slider__content {
+  position: relative;
+  width: auto;
+  max-width: 100%;
+  padding: 0;
+}
+.slider__close {
+  background-color: #ffffff56;
+  padding: 20px;
+  border-radius: 50%;
+  background-size: 25px;
+}
+.slider__img img {
+  width: 100%;
+}
+.slider__button {
+  width: 43px;
+  height: 100%;
+  background-color: unset;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px 19px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.slider__button:hover {
+  background-color: #ffffff56;
+}
+.slider__left, .slider__right {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.slider__left {
+  left: -43px;
+  background-image: url("../img/arrow_left_yellow.png");
+}
+.slider__right {
+  right: -43px;
+  background-image: url("../img/arrow_right_yellow.png");
 }
 
 @media (max-width: 1070px) {
@@ -2068,6 +2108,18 @@ html.lock {
   }
   .popup__content {
     padding: 60px 20px;
+  }
+
+  .slider {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .slider__content {
+    padding: 0;
+  }
+  .slider__close {
+    right: 0;
+    top: -50px;
   }
 
   .contacts__address {

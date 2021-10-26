@@ -13,6 +13,7 @@ const colors = document.querySelectorAll('input[name="color"]');
 const canvases = document.querySelectorAll('input[name="canvas"]');
 const openings = document.querySelectorAll('input[name="opening"]');
 const price = document.getElementById('price');
+const priceInput = document.getElementById('mail-price');
 const canvasTitle = document.getElementById('canvas-title');
 const openingTitle = document.getElementById('opening-title');
 const canvasSection = document.getElementById('canvas-section');
@@ -117,65 +118,86 @@ function calc() {
   }
   if (selectValue === 'Премиальная' && colorValue === 'Белый' && canvasValue === 'Стандарт') {
     priceValue = S * 2200;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Премиальная' && colorValue === 'Белый' && canvasValue === 'Мошка') {
     priceValue = S * 2900;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Премиальная' && colorValue === 'Белый' && canvasValue === 'Пыльца') {
     priceValue = S * 3600;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Премиальная' && colorValue === 'Белый' && canvasValue === 'Кошка') {
     priceValue = S * 3000;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Премиальная' && colorValue === 'Коричневый' && canvasValue === 'Стандарт') {
     priceValue = S * 2300;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Премиальная' && colorValue === 'Коричневый' && canvasValue === 'Мошка') {
     priceValue = S * 3000;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Премиальная' && colorValue === 'Коричневый' && canvasValue === 'Пыльца') {
     priceValue = S * 3700;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Премиальная' && colorValue === 'Коричневый' && canvasValue === 'Кошка') {
     priceValue = S * 3100;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Плиссе' && colorValue === 'Белый' && openingValue === 'Окно') {
     priceValue = S * 4200;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Плиссе' && colorValue === 'Белый' && openingValue === 'Дверь') {
     priceValue = S * 3700;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Плиссе' && colorValue === 'Коричневый' && openingValue === 'Окно') {
     priceValue = S * 4300;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Плиссе' && colorValue === 'Коричневый' && openingValue === 'Дверь') {
     priceValue = S * 3800;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Детская' && colorValue === 'Белый' && canvasValue === 'Стандарт') {
     priceValue = S * 9000;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Детская' && colorValue === 'Белый' && canvasValue === 'Мошка') {
     priceValue = S * 9500;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Детская' && colorValue === 'Белый' && canvasValue === 'Пыльца') {
     priceValue = S * 9900;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Детская' && colorValue === 'Белый' && canvasValue === 'Кошка') {
     priceValue = S * 9600;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Детская' && colorValue === 'Коричневый' && canvasValue === 'Стандарт') {
     priceValue = S * 9200;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Детская' && colorValue === 'Коричневый' && canvasValue === 'Мошка') {
     priceValue = S * 9700;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Детская' && colorValue === 'Коричневый' && canvasValue === 'Пыльца') {
     priceValue = S * 10200;
+    rangeError.classList.add('_hide');
   }
   if (selectValue === 'Детская' && colorValue === 'Коричневый' && canvasValue === 'Кошка') {
     priceValue = S * 9800;
+    rangeError.classList.add('_hide');
   }
   price.innerHTML = Math.round(priceValue);
+  priceInput.value = Math.round(priceValue);
 }
 
 function hideUnusedFields() {

@@ -89,7 +89,7 @@
           <a data-goto=".product-1" href="#0" class="option__card-wrapper scroll-to-item">
             <div class="option__container">
               <h2 class="option__title option__title_width">Обычные сетки</h2>
-              <a data-goto=".product-1" href="#0" class="button option__button scroll-to-item">Подробнее</a>
+              <span class="button option__button scroll-to-item">Подробнее</span>
             </div>
           </a>
         </li>
@@ -97,7 +97,7 @@
           <a data-goto=".product-2" href="#0" class="option__card-wrapper scroll-to-item">
             <div class="option__container">
               <h2 class="option__title">Вставные премиальные</h2>
-              <a data-goto=".product-2" href="#0" class="button option__button scroll-to-item">Подробнее</a>
+              <span class="button option__button scroll-to-item">Подробнее</span>
             </div>
           </a>
         </li>
@@ -105,7 +105,7 @@
           <a data-goto=".product-3" href="#0" class="option__card-wrapper scroll-to-item">
             <div class="option__container">
               <h2 class="option__title">Плиссе гармошка</h2>
-              <a data-goto=".product-3" href="#0" class="button option__button scroll-to-item">Подробнее</a>
+              <span class="button option__button scroll-to-item">Подробнее</span>
             </div>
           </a>
         </li>
@@ -113,7 +113,7 @@
           <a data-goto=".product-4" href="#0" class="option__card-wrapper scroll-to-item">
             <div class="option__container">
               <h2 class="option__title">Детские от&nbsp;выпадения</h2>
-              <a data-goto=".product-4" href="#0" class="button option__button scroll-to-item">Подробнее</a>
+              <span class="button option__button scroll-to-item">Подробнее</span>
             </div>
           </a>
         </li>
@@ -490,7 +490,7 @@
                 <h4 class="title popup__title">Напишите свое имя и телефон, чтобы оформить заказ</h4>
                 <div action="sendmail.php" method="POST" class="popup__form">
                   <input type="text" name="name" class="popup__input popup__name" placeholder="Введите имя" required>
-                  <input type="tel" name="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup__input popup__tel" placeholder="Введите телефон" required>
+                  <input type="tel" name="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup__input popup__tel mask" placeholder="Введите телефон" required>
                   <button type="submit" class="button popup__button popup__button_calculator">Отправить заказ</button>
                 </div>
               </div>
@@ -600,7 +600,7 @@
         <form action="sendmail.php" method="POST" class="popup__form">
           <input type="text" name="name" class="popup__input popup__name" placeholder="Введите имя" required>
           <input type="email" name="email" class="popup__input popup__email _hide" placeholder="Введите e-mail">
-          <input type="tel" name="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup__input popup__tel" placeholder="Введите телефон" required>
+          <input type="tel" name="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup__input popup__tel mask" placeholder="Введите телефон" required>
           <input id="mail-title" type="text" name="title" class="visually-hidden">
           <button type="submit" class="button popup__button">Отправить заявку</button>
         </form>
@@ -633,6 +633,7 @@
   <script src="https://api-maps.yandex.ru/2.1/?apikey=c8511ba3-2023-48ae-815e-b11ef6a04ee4&lang=ru_RU"></script>
   <script src="js/ymap.js"></script>
   <script src="js/lazy-load.js"></script>
+  <script src="js/mask-tel.js"></script>
 </body>
 
 </html>

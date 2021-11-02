@@ -392,7 +392,7 @@
         <form id="calculator" action="sendmail-2.php" method="POST" class="calculator__form">
           <div class="calculator__left-col">
             <span class="calculator__subtitle">1.Выберите тип сетки</span>
-            <select id="calc-select" name="select" id="name" class="calculator__select">
+            <select id="calc-select" name="select" class="calculator__select">
               <option value="Обычная" selected>Обычная</option>
               <option value="Премиальная">Премиальная</option>
               <option value="Плиссе">Плиссе, гармошка</option>
@@ -409,8 +409,8 @@
                   <div class="range__max-value">200 см</div>
                 </div>
                 <input id="calc-width" name="width" type="range" class="range__input" min="20" max="200" step="5" value="110">
-                <a href="#0" type="button" class="range__button range__button_left">-</a>
-                <a href="#0" type="button" class="range__button range__button_right">+</a>
+                <a href="#0" class="range__button range__button_left">-</a>
+                <a href="#0" class="range__button range__button_right">+</a>
               </div>
             </div>
             <div class="range range_margin">
@@ -478,7 +478,7 @@
               Цена: <span id="price">900</span> р
             </div>
             <input id="mail-price" type="text" name="price" class="visually-hidden" value="900">
-            <a href="#calculator-popup" type="submit" class="button calculator__button popup-link">Заказать</a>
+            <a href="#calculator-popup" class="button calculator__button popup-link">Заказать</a>
           </div>
 
           <aside class="popup" id="calculator-popup">
@@ -488,7 +488,7 @@
                   <span class="visually-hidden">Крестик - закрывает форму (модальное окно) при нажатии</span>
                 </button>
                 <h4 class="title popup__title">Напишите свое имя и телефон, чтобы оформить заказ</h4>
-                <div action="sendmail.php" method="POST" class="popup__form">
+                <div class="popup__form">
                   <input type="text" name="name" class="popup__input popup__name" placeholder="Введите имя" required>
                   <input type="tel" name="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup__input popup__tel mask" placeholder="Введите телефон" required>
                   <button type="submit" class="button popup__button popup__button_calculator">Отправить заказ</button>
@@ -555,7 +555,7 @@
       <div id="map-mobile" class="_load-map"></div>
     </div>
     <address class="contacts__content wrapper _anim-items _anim-no-hide _scroll">
-        <h3 class="contacts__title">Контакты</h3>
+        <div class="contacts__title">Контакты</div>
         <div class="contacts__address">г. Лермонтов, ул. Матвиенко, д. 3</div>
         <div class="contacts__description contacts__description_bold"><span>2-ой Дом Олимп</span></div>
         <div class="contacts__description">(Напротив фитнес - клуба FitTime)</div>
